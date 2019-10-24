@@ -2,7 +2,7 @@
 
 It came from one project to another, as a tail that was pulled out from a codebase, so it was called `hvost`, which is `tail` in Russian. I quickly understood that I could not live without `hvost`, and what I can't also live without is Shaverma, aka Asian burrito. So, behold ✨
 
-Shaverma is written in styl, is modular and doesn't fight with existing stylesheets.
+Shaverma is written in [Stylus](http://stylus-lang.com/), is modular and doesn't fight with existing stylesheets.
 
 ## What's inside
 
