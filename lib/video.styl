@@ -1,0 +1,23 @@
+/**
+ * A container for a 16:9 ratio embed.
+ * Fits a 16:9 embed perfectly in a 100%-width container
+ */
+.video, .video169, .video43, .video219, .video21
+    width 100%
+    position relative
+    padding-top 56.25%
+    iframe, object, embed, video
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+/** A container for a 4:3 ratio embed */
+.video43
+    padding-top 75%
+/** A container for a 21:9 ratio embed */
+.video43
+    padding-top (9/21*100)%
+/** A container for a 2:1 ratio embed */
+.video21
+    padding-top 50%

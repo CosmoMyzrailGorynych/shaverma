@@ -1,0 +1,29 @@
+/**
+ * Applies to a parent element; creates a flex-based vertical/horizontal container
+ */
+.flexrow, .flexcol
+    display flex
+    flex-flow row nowrap
+    & > *
+        flex 1 1 auto
+    &.middle
+        align-items center
+.flexcol
+    flex-flow column nowrap
+
+.flexfix
+    display flex
+    flex-direction column
+.flexfix-header, .flexfix-footer, .nogrow.nogrow
+    flex-grow 0
+.flexfix-body
+    flex 1 1 auto
+    overflow auto
+    overflow-x visible
+    overflow-y auto
+    position relative
+
+.nogrow.nogrow
+    flex-shrink 0
+.noshrink.noshrink
+    flex-shrink 0

@@ -1,0 +1,65 @@
+@keyframes rotate
+    from
+        transform rotate(0deg)
+    to
+        transform rotate(360deg)
+@keyframes rotateccw
+    from
+        transform rotate(0deg)
+    to
+        transform rotate(-360deg)
+@keyframes wiggle
+    25%
+        left 0.1em
+    50%
+        top 0.1em
+    75%
+        left -0.1em
+    from, to
+        top -0.1em
+@keyframes fade-in
+    from
+        opacity 0
+    to
+        opacity 100%
+@keyframes pop-in
+    from
+        transform scale(0, 0)
+    to
+        transform scale(1, 1)
+@keyframes appear
+    from
+        opacity 0
+        transform scale(0.9, 0.9) translate(0, 2rem)
+    to
+        opacity 1
+        transform scale(1, 1) translate(0, 0)
+@keyframes pop-out
+    from
+        transform scale(1, 1)
+    50%, to
+        transform scale(0, 0)
+@keyframes shake
+    from, to
+        transform translate3d(0, 0, 0)
+    10%, 30%, 50%, 70%, 90%
+        transform translate3d(-10px, 0, 0)
+    20%, 40%, 60%, 80%
+        transform translate3d(10px, 0, 0)
+.rotate
+    animation rotate linear 1s infinite
+.rotateccw
+    animation rotateccw linear 1s infinite
+.wiggle
+    position relative
+    top 0
+    left 0
+    display inline-block
+    animation wiggle cubic-bezier(0.45, 0.05, 0.55, 0.95) 1s infinite
+.shake
+    animation shake 1s ease 1
+.popout
+    animation pop-out cubic-bezier(0.13, -0.1, 0.65, -0.51) 0.75s 1
+    z-index 50
+.appear
+    animation 0.35s cubic-bezier(0.39, 0.58, 0.57, 1) appear

@@ -1,0 +1,23 @@
+button
+    box-sizing border-box /* Mac VS Win */
+
+/* You must provide your own styles for focused elements!*/
+button::-moz-focus-inner
+  border 0
+input, textarea, select, button
+    &:focus
+        outline 0
+
+img, a
+    border 0
+
+body
+    margin 0
+    padding 0
+
+::-moz-placeholder, ::-webkit-input-placeholder, :-ms-input-placeholder
+    color inherit
+    opacity 0.5
+
+input, button, textarea, select
+    font inherit

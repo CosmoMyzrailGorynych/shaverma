@@ -1,0 +1,94 @@
+/**
+ * Describes utility classes for tweaking looks of block elements
+ */
+
+/**
+ * Makes an elements fill the whole width, removing possible margins
+ */
+.wide
+    width 100% !important
+    margin-left 0
+    margin-right 0
+    box-sizing border-box
+
+/**
+ * Sticks elements to the top of the screen
+ */
+.sticky
+    position sticky
+    top 0
+
+
+/*********** Positioning ************/
+
+/**
+ * Works on elements of limited width
+ */
+.placecenter
+    margin-left auto
+    margin-right auto
+
+.relative
+    position relative
+
+/**
+ * A trick to center an element inside a bigger element, in two axes. Works even on IE8+
+ `.middle` applies to a parent container, `.middleinner` applies to an element that should be centered.
+ */
+.middle
+    &:before
+        content ''
+        display inline-block
+        min-height inherit
+        height 100%
+        vertical-align middle
+.middleinner
+    display inline-block !important
+    vertical-align middle !important
+
+.alignmiddle
+    vertical-align middle !important
+
+/**
+ * Makes a box fully rounded, turning rectangles into capsules
+ */
+.round
+    border-radius 100500rem
+/**
+ * Turs a rectangle into an ellipse
+ */
+.ellipse
+    border-radius 100%
+
+
+.block
+    display block
+.inline
+    display inline
+.inlineblock
+    display inline-block
+.hide
+    display none
+.show
+    display initial
+
+/**
+ * Generates classes like `.npt`, `.nm`, `.nbr`, `.nomargin`, `.nopaddingright`
+ */
+$noblah = {
+    l: 'left',
+    r: 'right',
+    t: 'top',
+    b: 'bottom'
+}
+$shortNames = {
+    m: 'margin',
+    p: 'padding',
+    b: 'border'
+}
+for key, val in $shortNames
+    for skey, sval in $noblah
+        .n{key}{skey}, .no{val}{sval}
+            {val}-{sval} 0 !important
+    .n{key}, .no{val}
+        {val} 0 !important

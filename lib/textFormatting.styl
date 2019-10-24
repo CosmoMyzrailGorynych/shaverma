@@ -1,0 +1,46 @@
+.big
+    font-size 125%
+.small
+    font-size 87.5% // Assuming a 16px base font size; it will result into 14px
+.tiny
+    font-size 75% // 12px
+.rem
+    font-size 1rem !important
+
+/**
+ * Nicely crops long text into one line, putting an ellipsis at the end.
+ */
+.crop
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+    display inline-block
+    max-width 100%
+    vertical-align text-bottom
+
+
+.center
+    text-align center
+.right
+    text-align right
+.left
+    text-align left
+
+
+$weightNames = {
+    extrabold: 900, /* `black` is a color's name */
+    heavy: 800,
+    bold: 700,
+    semibold: 600,
+    medium: 500,
+    normal: 400,
+    light: 300,
+    thin: 200,
+    hairline: 100,
+    bolder: bolder,
+    lighter: lighter
+}
+
+for key, val in $weightNames
+    .{key}
+        font-weight val

@@ -1,0 +1,56 @@
+/**
+ * Float-based columns. Can be used with flex as well.
+ */
+
+.column
+    padding 0 (lookup('$gutterWidth')? $gutterWidth : 1rem)
+    box-sizing border-box
+    float left
+    vertical-align top
+
+for i in 1 2 3 4 5 6 7 8 9 10 11
+    .c{i}
+        width ((100% / 12 * i))
+        @extend .column
+
+for i in 1 2 3 4 5 6 7 8 9
+    .ci-10
+        width ((100% / 10 * i))
+        @extend .column
+
+for i in 1 2 3 4 5 6 7 8
+    .ci-9
+        width ((100% / 9 * i))
+        @extend .column
+
+
+/* Idk why would you use it, but OK */
+.c12, .c9-9, .c10-10
+    padding 0 1rem
+    box-sizing border-box
+
+.columns
+    :first-child
+        padding-left 0
+    :last-child
+        padding-right 0
+    &::after
+        content ''
+        display block
+        clear both
+
+.fifty
+    width 50%
+.fourty
+    width 40%
+.sixty
+    width 60%
+.fifty, .fourty, .sixty
+    float left
+    padding 0 1em
+    box-sizing border-box
+    @media (max-width 640px)
+        float none
+        padding-left 0
+        padding-right 0
+        width 100%

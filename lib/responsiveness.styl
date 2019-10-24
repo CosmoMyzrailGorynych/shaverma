@@ -1,0 +1,17 @@
+img
+    max-width 100%
+    box-sizing border-box
+
+for size in 1920 1440 1280 1024 960 800 640 480
+    @media (max-width (size)px)
+        .hide{size}
+            display none
+        .show{size}
+            display initial
+        .breakon{size}
+            display block !important
+            float none
+            width 100%
+            box-sizing border-box
+            margin-left 0
+            margin-right 0
